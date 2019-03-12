@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { DragulaModule } from 'ng2-dragula';
+import { NbThemeModule } from '@nebular/theme';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { SharedModule } from './modules/shared/shared.module';
@@ -28,6 +29,7 @@ export function getWindow() {
     // the page.
     BrowserModule.withServerTransition({appId: 'my-app'}),
     TransferHttpCacheModule,
+    NbThemeModule.forRoot(),
 
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full'},
